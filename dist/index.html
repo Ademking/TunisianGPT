@@ -7,6 +7,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Primary Meta Tags -->
+<title>TunisianGPT</title>
+<meta name="title" content="TunisianGPT">
+<meta name="description" content="What if ChatGPT was Tunisian?">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tunisiangpt.ademkouki.tech/">
+<meta property="og:title" content="TunisianGPT">
+<meta property="og:description" content="What if ChatGPT was Tunisian?">
+<meta property="og:image" content="https://tunisiangpt.ademkouki.tech/preview.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://tunisiangpt.ademkouki.tech/">
+<meta property="twitter:title" content="TunisianGPT">
+<meta property="twitter:description" content="What if ChatGPT was Tunisian?">
+<meta property="twitter:image" content="https://tunisiangpt.ademkouki.tech/preview.png">
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +47,7 @@
     class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-700 opacity-75 flex flex-col items-center justify-center">
     <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
     <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
-    <p class="w-1/3 text-center text-white">لحظة و يتحل الموقع... أول مرة تاخذ شوية وقت</p>
+    <p class="w-1/3 text-center text-white">لحظة ... أول مرة تاخذ شوية وقت</p>
   </div>
 
 
@@ -48,7 +69,7 @@
     </div>
     <div class="border-t-2 border-gray-800 px-4 pt-4 mb-2 sm:mb-0">
       <div class="relative flex">
-        <input type="text" placeholder="Write your message!" id="message-input"
+        <input type="text" placeholder="Write your message!" id="message-input" inputmode="none" autocomplete="off"
           class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-200 placeholder-gray-600 pl-4 bg-gray-800 rounded-md py-3">
         <div class="absolute right-0 items-center inset-y-0 hidden sm:flex">
           <button type="button" id="send-button"
