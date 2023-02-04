@@ -1,7 +1,7 @@
 import './style.css'
 import DOMPurify from 'dompurify'
 import Fuse from 'fuse.js'
-import { removeBadWords, emojifiText, guid, sleep, isSpecialMessage, runCommand } from './utils'
+import { removeBadWords, emojifiText, guid, sleep, blurKeyboard, scrollToBottomDoc, isSpecialMessage, runCommand } from './utils'
 import { FUSE_CONFIG, MAX_RESULTS, I_DONT_UNDERSTAND_MSGS, DEFAULT_TEXT_SIZE, TYPING_SPEED } from './config'
 import myData from './data.json' assert { type: 'json' }
 
@@ -105,6 +105,7 @@ const formatMessage = message => {
 sendButton.addEventListener('click', async () => {
   const message = messageInput.value
   if (message) {
+    blurKeyboard()
     messageInput.value = ''
     sendUserMessage(message)
     await sleep(200)
@@ -117,6 +118,7 @@ messageInput.addEventListener('keyup', async e => {
   if (e.key === 'Enter') {
     const message = messageInput.value
     if (message) {
+      blurKeyboard()
       messageInput.value = ''
       sendUserMessage(message)
       await sleep(200)
@@ -127,6 +129,7 @@ messageInput.addEventListener('keyup', async e => {
 
 // send initial message
 setTimeout(async () => {
+  scrollToBottomDoc()
   sendBotMessage('عسلامة صديقي', true)
   await sleep(1000)
   sendBotMessage('كيفاش إنجم نعاونك؟', true)

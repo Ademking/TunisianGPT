@@ -70,3 +70,13 @@ export const runCommand = async message => {
 const clearMessages = () => {
   document.getElementById('messages').innerHTML = ''
 }
+
+// blur keyboard on mobile
+export const blurKeyboard = () => {
+  document.getElementById('message-input').blur()
+};
+
+export const scrollToBottomDoc = () => {
+  // scroll all the way down
+  window.scrollTo(0, document.body.scrollHeight)
+}
